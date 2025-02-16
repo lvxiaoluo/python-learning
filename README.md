@@ -1,2 +1,3 @@
 # python-learning
-python学习工程
+Python学习工程
+从0到1学习Python相关知识
