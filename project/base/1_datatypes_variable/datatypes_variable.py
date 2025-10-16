@@ -78,3 +78,77 @@ print('Hello, %s' % 'world')
 print('Hi,%s,you have $%d.' % ('Michael', 1000000))
 
 print('Hi,%s,you have $%d.' %('Bob', 999999))
+
+print('%3d-%02d' % (3,1))
+print('%.2f' % 3.1415926)
+
+# 字符串里面有%时,需要转义,用%%来表示一个%
+print('growth rate: %d %%' % 7)
+
+# format() 
+print('Hello,{0},成绩提升了{1:.1f}%'.format('小明',17.125))
+
+# f-string
+r = 2.5
+s= 3.14 * r ** 2
+print(f'The area of a circle with radius {r} is {s:.2f}')
+
+# 列表 list
+classmates = ['Michael','Bob','Tracy']
+print(classmates)
+# len() 列表元素个数
+print(len(classmates))
+
+print(classmates[0])
+print(classmates[1])
+print(classmates[2])
+# 索引超出了范围是,会报IndexError错误
+# print(classmates[3])
+# 获取最后一个元素，可以用 -1 做索引，直接获取最后一个元素
+print(classmates[-1])
+print(classmates[-2])
+print(classmates[-3])
+# 倒数第4个就会越界 IndexError: list index out of range
+# print(classmates[-4])
+# list中追加元素到末尾
+classmates.append('Adam')
+print(classmates)
+# 把元素插入到指定位置
+classmates.insert(0,'Jack')
+print(classmates)
+# 删除list末尾的元素，用pop()方法
+print(classmates.pop())
+print(classmates)
+# 删除指定位置元素，使用pop(i)方法，其中i是索引位置
+print(classmates.pop(1))
+print(classmates)
+# 把某个元素替换成别的元素，直接赋值对应的索引位置
+classmates[1] = 'Sarah'
+print(classmates)
+# list里面的元素数据类型也可以不同
+L = ['Apple',123,True]
+print(L)
+# list元素也可以是另一个list
+s = ['Python','Java',['asp','php'],'scheme']
+print(s)
+print(len(s))
+p = ['asp','php']
+s = ['Python','Java',p,'scheme']
+print(p)
+print(s)
+print(p[1])
+print(s[2][1])
+
+# tuple 有序列表元组.tuple一旦初始化就不能修改
+classmates = ('Michael','Bob','Tracy')
+print(classmates)
+# 括号()既可以表示tuple,又可以表示数学公式中的小括号,因此Python规定这种情况下,按小括号进行计算,计算结果自然是1
+# 所以只有1个元素的tuple定义时必须加一个逗号, 来消除歧义
+t = (1,)
+print(t)
+# tuple所谓的不变是说,tuple的每个元素,指向永远不变.
+t = ('a','b',['A','B'])
+print(t)
+t[2][0] = 'X'
+t[2][1] = 'Y'
+print(t)
