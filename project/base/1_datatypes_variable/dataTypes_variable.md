@@ -71,3 +71,4 @@ not - 逻辑非运算,如果为True,结果为False,如果为False,结果为True
 tuple是一种有序集合,tuple一旦创建,就无法被修改
 > classmates = ('Michael','Bob','Tracy')
 
+### 8.条件判断
