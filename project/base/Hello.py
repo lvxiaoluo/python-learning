@@ -5,6 +5,8 @@ print('Hello world', 'Hello python')
 print(300)
 print(100+300)
 
+
+
 # 输入
 name =input('请输入你的姓名：')
 print('hello',name)
