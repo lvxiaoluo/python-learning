@@ -72,3 +72,20 @@ tuple是一种有序集合,tuple一旦创建,就无法被修改
 > classmates = ('Michael','Bob','Tracy')
 
 ### 8.条件判断
+8.1 两个分支判断
+if 条件:
+    执行语句1
+else:
+    执行语句2
+
+if判断是True 执行  ，False则执行 else 语句
+
+8.2 多个分支判断
+
+if 条件1:
+    执行语句1
+elif 条件2:
+    执行语句2
+else:
+    执行语句3
+

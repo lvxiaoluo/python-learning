@@ -152,3 +152,22 @@ print(t)
 t[2][0] = 'X'
 t[2][1] = 'Y'
 print(t)
+
+# if 条件判断
+age = 20
+if age >= 18:
+    print("your age is ",age)
+
+# 多个条件判断
+age = 3
+if age >= 18:
+    print('your age is ',age)
+    print('jack')
+elif age >=6:
+    print("mem age is ",age)
+else:
+    print('your age is ',age)
+    print('tom')
+
+
+
