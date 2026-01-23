@@ -169,5 +169,42 @@ else:
     print('your age is ',age)
     print('tom')
 
+weight=1000.5
+height=1.75
+bmi = weight / (height*height)
+if bmi < 18.5:
+    print('过轻')
+elif bmi >=18.5 and bmi <25:
+    print("正常")
+elif bmi >=25 and bmi < 28:
+    print('过重')
+elif bmi>=28 and bmi<32:
+    print('肥胖')
+else:
+    print("没有规则")
 
+# match 模式匹配
+score = 'D'
+match score :
+    case 'A':
+        print('score is A ')
+    case 'B':
+        print('score is B')
+    case 'C':
+        print('score is C')
+    case _:
+        print('invalid score')
 
+# 复杂匹配
+age = 3
+match age:
+    case x if x < 10:
+        print(f'< 10 years old: {x}')
+    case 10:
+        print('10 years old.')
+    case 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18:
+        print('11~18 years old.')
+    case 19:
+        print('19 years old.')
+    case _:
+        print('not sure.')

@@ -81,6 +81,8 @@ else:
 if判断是True 执行  ，False则执行 else 语句
 
 8.2 多个分支判断
+if 语句执行从上往下判断，如果在某个判断上是Ture，把该判断对应得语句执行后，就会忽略剩下得elif 和 else 语句。
+
 
 if 条件1:
     执行语句1
@@ -89,3 +91,45 @@ elif 条件2:
 else:
     执行语句3
 
+
+if 判断条件还可以简写，比如写：
+if x:
+    print('True')
+
+只要 x 是非零数值、非空字符串、非空list等，就判断为True,否则为False
+
+
+input() 返回的数据类型时str ,str 不能直接和整数比较，需要转成整数
+
+### 9.模式匹配
+当我们用 if ... elif ... elif ... else ... 判断时，会写很长一串代码，可读性差
+针对某个变量匹配若干种情况，可以使用match语句
+```python
+score = 'B'
+match score:
+    case 'A':
+        print('score is A.')
+    case 'B':
+        print('score is B.')
+    case 'C':
+        print('score is C.')
+    case _:
+        print('Invalid score.')
+```
+
+#### 9.1 复杂匹配
+match 语句除了可以匹配简单的单个值外，还可以匹配多个值、匹配一定范围。并且把匹配后的值绑定到变量
+```python
+age = 15
+match age:
+    case x if x < 10:
+        print(f'<10 years old:{x}')
+    case 10:
+        print('10 years old.')
+    case 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 :
+        print('11~18 years old.')
+    case 19:
+        print('19 years old.')
+    case _:
+        print('not sure.')
+```
