@@ -133,3 +133,40 @@ match age:
     case _:
         print('not sure.')
 ```
+match 可以匹配列表
+
+```python
+args = ['gcc','hello.c','world.c']
+match args:
+    case ['gcc']:
+        print('gcc:missing source file(s)')
+    case ['gcc',file1,*files]:
+        print('gcc compile:'+file1+','+','.join(files))
+    case ['clean']:
+        print('clean')
+    case _:
+        print('invalid command')
+```
+第一个 case['gcc']表示列表仅有 'gcc' 一个字符串，没有指定文件名，报错
+第二个 case['gcc',file,*files] 表示第一个字符串是'gcc'，第二个字符串绑定到变量 file1,后面的任意个字符串绑定到 *files，它实际上表示至少一个文件；
+第三个 case['clean']表示列表仅有 'clean' 一个字符串；
+最后一个 case _ 表示所有的情况。
+
+
+### 10.循环
+python循环有两种，一种是 for...in循环，依次把list 或者 tuple种的每个元素迭代出来
+
+```python
+names = ['Michael','Bob','Tracy']
+for name in names:
+    print(name)
+```
+
+```python
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n -2
+print(sum)
+```
